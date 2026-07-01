@@ -77,7 +77,7 @@ export class UserRepository implements IUserRepository {
             },
             body: JSON.stringify(user) // UserオブジェクトをJSON文字列に変換して送信する
         });
-        console.log("★レスポンスの中身:", await response.clone().text());
+        // ステータスコードに応じたハンドリング
         switch (response.status) {
             case 200:
             case 201:
